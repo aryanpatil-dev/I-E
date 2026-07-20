@@ -105,13 +105,6 @@ export default function Home() {
                     className="h-full w-auto object-contain rounded"
                   />
                 </div>
-                <div className="bg-white p-0.5 sm:p-1.5 rounded border border-electric/20 shadow-[0_4px_12px_rgba(201,160,62,0.12)] h-7 w-auto sm:h-11 md:h-14 lg:h-16 flex items-center justify-center">
-                  <img
-                    src="/assets/logos/I_E_CELL_Logo.jpeg"
-                    alt="I&E Cell"
-                    className="h-full w-auto object-contain rounded"
-                  />
-                </div>
               </div>
             </div>
             <p className="mx-auto mt-8 max-w-3xl text-center text-base font-semibold leading-8 text-muted sm:text-lg">

@@ -63,8 +63,13 @@ export default function Navbar() {
       className="fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl"
     >
       <nav className="page-shell flex h-20 items-center justify-between">
-        <NavLink to="/" className="group block w-[245px] sm:w-[330px]" onClick={() => setMenuOpen(false)}>
-          <AnimatedIELogo compact className="h-auto w-full" />
+        <NavLink to="/" className="group flex items-center gap-2.5 sm:gap-3.5 w-[285px] sm:w-[385px]" onClick={() => setMenuOpen(false)}>
+          <img
+            src="/assets/logos/I_E_CELL.ico"
+            alt="I&E Cell Logo"
+            className="h-8 w-8 sm:h-11 sm:w-11 rounded-full object-contain flex-shrink-0"
+          />
+          <AnimatedIELogo compact className="h-auto w-full flex-grow" />
         </NavLink>
 
         <div className="hidden items-center gap-2 md:flex">
