@@ -3,7 +3,7 @@ import { Instagram, Linkedin, Mail, MapPin, Youtube } from 'lucide-react';
 const socialLinks = [
   { label: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/iandecell_ace/' },
   { label: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/atharva-college-of-engineering-s-innovation-entrepreneurship-cell/' },
-  { label: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/' },
+  { label: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@ace_eeutopia' },
   { label: 'Mail', icon: Mail, href: 'mailto:iecellevents@example.edu' },
 ];
 
