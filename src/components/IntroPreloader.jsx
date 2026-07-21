@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 
 export default function IntroPreloader({ onFadeStart, onComplete }) {
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
-  const [step, setStep] = useState(0); // 0: Initial delay (0.5s), 1: Video playing, 2: Video ended waiting (0.5s), 3: Fading out
+  const [step, setStep] = useState(0); // 0: Initial delay (0.5s), 1: Video playing, 3: Fading out
   const [interactionRequired, setInteractionRequired] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const videoRef = useRef(null);
@@ -84,14 +84,10 @@ export default function IntroPreloader({ onFadeStart, onComplete }) {
   };
 
   const handleVideoEnded = () => {
-    setStep(2);
-    // Step 2: Wait 0.5s after video ends, then start fade out
-    setTimeout(() => {
-      setStep(3);
-      if (onFadeStart) {
-        onFadeStart();
-      }
-    }, 500);
+    setStep(3);
+    if (onFadeStart) {
+      onFadeStart();
+    }
   };
 
   const videoSrc = isMobile
