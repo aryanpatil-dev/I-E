@@ -87,6 +87,10 @@ export default function Home() {
                     className="h-full w-auto object-contain rounded"
                   />
                 </div>
+              </div>
+
+              {/* Overlay Top-Center: College Logo (Theme Matched) */}
+              <div className="absolute left-1/2 -translate-x-1/2 top-3 z-20 flex sm:top-5">
                 <div className="bg-white p-0.5 sm:p-1.5 rounded border border-electric/20 shadow-[0_4px_12px_rgba(201,160,62,0.12)] h-7 w-auto sm:h-11 md:h-14 lg:h-16 flex items-center justify-center">
                   <img
                     src="/assets/logos/Atharva_college_logo.jpeg"
