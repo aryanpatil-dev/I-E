@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import Reveal from '../components/Reveal.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
+import { cellStats } from '../data/siteContent.js';
 
 const pillars = [
   {
@@ -208,8 +209,18 @@ export default function About() {
               Connecting our vibrant community of innovators, builders, and ecosystem leaders across professional networks and media.
             </p>
           </div>
+          <Reveal>
+            <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
+              {cellStats.map((stat) => (
+                <div key={stat.label} className="rounded-lg border border-electric/15 bg-paper/60 p-5 text-center shadow-soft backdrop-blur-md">
+                  <p className="text-3xl font-black text-electric">{stat.value}</p>
+                  <p className="mt-2 text-xs font-bold leading-4 text-muted">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:max-w-4xl lg:mx-auto">
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:max-w-4xl lg:mx-auto">
             {/* Instagram Stat Card */}
             <Reveal>
               <div className="neon-card group h-full flex flex-col justify-between border-pink-500/10 hover:border-pink-500/30 hover:shadow-[0_18px_48px_rgba(236,72,153,0.15)] transition-all duration-300">

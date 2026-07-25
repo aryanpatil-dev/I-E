@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowUpRight,
   BadgeCheck,
@@ -11,13 +11,18 @@ import {
   Network,
   Rocket,
   UsersRound,
+  ChevronLeft,
+  Calendar,
+  Clock,
+  MapPin,
+  Sparkles,
 } from 'lucide-react';
 import AnimatedIELogo from '../components/AnimatedIELogo.jsx';
 import Marquee from '../components/Marquee.jsx';
 import Reveal from '../components/Reveal.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 import Testimonials from '../components/Testimonials.jsx';
-import { cellStats } from '../data/siteContent.js';
+import { fetchAnnouncements } from '../utils/fetchAnnouncements.js';
 
 const HeroScene = lazy(() => import('../components/HeroScene.jsx'));
 
@@ -58,6 +63,25 @@ const campusBlocks = [
 ];
 
 export default function Home() {
+  const [announcements, setAnnouncements] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    fetchAnnouncements().then((data) => {
+      setAnnouncements(data);
+    });
+  }, []);
+
+  const nextSlide = () => {
+    if (announcements.length === 0) return;
+    setCurrentIndex((prev) => (prev + 1) % announcements.length);
+  };
+
+  const prevSlide = () => {
+    if (announcements.length === 0) return;
+    setCurrentIndex((prev) => (prev - 1 + announcements.length) % announcements.length);
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -70,7 +94,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 34 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto max-w-7xl"
+            className="mx-auto max-w-7xl text-center"
           >
             <div className="relative overflow-hidden rounded-lg border border-electric/10 bg-cloud p-0 shadow-soft">
               <div className="absolute -right-8 -top-8 size-32 rounded-full bg-flare/30 blur-2xl" />
@@ -111,18 +135,109 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <p className="mx-auto mt-8 max-w-3xl text-center text-base font-semibold leading-8 text-muted sm:text-lg">
-              A student-led innovation ecosystem connecting ACE IIC, ACE EMBER, IEDC, iLab,
-              faculty mentorship, prototype culture, and entrepreneurship programs.
-            </p>
-            <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4">
-              {cellStats.map((stat) => (
-                <div key={stat.label} className="rounded-lg bg-cloud/90 p-4 text-center shadow-soft">
-                  <p className="text-2xl font-black text-electric">{stat.value}</p>
-                  <p className="mt-2 text-[11px] font-bold leading-4 text-muted">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+
+            {announcements.length > 0 && (
+              <div className="relative mx-auto mt-12 w-full max-w-5xl rounded-2xl border border-electric/15 bg-cloud/85 shadow-soft overflow-hidden text-left">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentIndex}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -15 }}
+                    transition={{ duration: 0.35, ease: 'easeInOut' }}
+                    className="grid md:grid-cols-[1.25fr_0.75fr] min-h-[360px] w-full items-stretch"
+                  >
+                    {/* Left: Text & Badges */}
+                    <div className="relative z-10 flex flex-col justify-between p-6 sm:p-8 md:p-10 bg-gradient-to-r from-cloud via-cloud/95 to-transparent">
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-electric border border-electric/25">
+                            <Sparkles className="size-3" />
+                            {announcements[currentIndex].tag || 'Latest Announcement'}
+                          </span>
+                        </div>
+                        <h3 className="mt-4 text-2xl font-black text-white sm:text-3xl lg:text-4xl tracking-tight leading-tight">
+                          {announcements[currentIndex].title}
+                        </h3>
+
+                        {/* Metadata Pills */}
+                        <div className="mt-4 flex flex-wrap gap-2 text-[11px] font-bold text-muted">
+                          {announcements[currentIndex].date && (
+                            <span className="flex items-center gap-1 bg-paper/60 px-2.5 py-1 rounded border border-electric/10">
+                              <Calendar className="size-3.5 text-electric" />
+                              {announcements[currentIndex].date}
+                            </span>
+                          )}
+                          {announcements[currentIndex].time && announcements[currentIndex].time !== '-' && (
+                            <span className="flex items-center gap-1 bg-paper/60 px-2.5 py-1 rounded border border-electric/10">
+                              <Clock className="size-3.5 text-electric" />
+                              {announcements[currentIndex].time}
+                            </span>
+                          )}
+                          {announcements[currentIndex].venue && announcements[currentIndex].venue !== '-' && (
+                            <span className="flex items-center gap-1 bg-paper/60 px-2.5 py-1 rounded border border-electric/10">
+                              <MapPin className="size-3.5 text-electric" />
+                              {announcements[currentIndex].venue}
+                            </span>
+                          )}
+                        </div>
+
+                        <p className="mt-4 text-sm sm:text-base leading-6 sm:leading-7 text-muted max-w-xl">
+                          {announcements[currentIndex].subtext}
+                        </p>
+                      </div>
+
+                      <div className="mt-6 flex flex-wrap gap-4 items-center justify-between">
+                        {announcements[currentIndex].btnText && (
+                          <a
+                            href={announcements[currentIndex].btnUrl || '#'}
+                            target={announcements[currentIndex].btnUrl?.startsWith('http') ? '_blank' : '_self'}
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 rounded-full bg-electric px-5 py-3 text-xs font-black uppercase tracking-wider text-white shadow-neon transition hover:-translate-y-0.5 hover:bg-plasma"
+                          >
+                            {announcements[currentIndex].btnText}
+                            <ArrowUpRight className="size-3.5" />
+                          </a>
+                        )}
+
+                        {/* Controls */}
+                        {announcements.length > 1 && (
+                          <div className="flex items-center gap-3">
+                            <button
+                              onClick={prevSlide}
+                              className="grid size-9 place-items-center rounded-full border border-electric/25 bg-paper/50 hover:bg-electric hover:text-white transition cursor-pointer text-ink"
+                              aria-label="Previous slide"
+                            >
+                              <ChevronLeft className="size-5" />
+                            </button>
+                            <button
+                              onClick={nextSlide}
+                              className="grid size-9 place-items-center rounded-full border border-electric/25 bg-paper/50 hover:bg-electric hover:text-white transition cursor-pointer text-ink"
+                              aria-label="Next slide"
+                            >
+                              <ChevronRight className="size-5" />
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Right: Image */}
+                    <div className="relative h-64 md:h-auto overflow-hidden">
+                      <img
+                        src={announcements[currentIndex].image}
+                        alt={announcements[currentIndex].title}
+                        className="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+                      />
+                      {/* Fades for smooth blending */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-cloud via-transparent to-transparent hidden md:block" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-cloud via-transparent to-transparent md:hidden" />
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            )}
+
             <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
                 to="/initiatives"
