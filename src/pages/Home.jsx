@@ -62,6 +62,18 @@ const campusBlocks = [
   },
 ];
 
+function getButtonLinkProps(url) {
+  if (!url) return { href: '#', target: '_self' };
+  const cleanUrl = url.trim();
+  if (cleanUrl.startsWith('/')) {
+    return { href: cleanUrl, target: '_self' };
+  }
+  if (cleanUrl.startsWith('http://') || cleanUrl.startsWith('https://')) {
+    return { href: cleanUrl, target: '_blank', rel: 'noreferrer' };
+  }
+  return { href: `https://${cleanUrl}`, target: '_blank', rel: 'noreferrer' };
+}
+
 export default function Home() {
   const [announcements, setAnnouncements] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -190,9 +202,7 @@ export default function Home() {
                       <div className="mt-6 flex flex-wrap gap-4 items-center justify-between">
                         {announcements[currentIndex].btnText && (
                           <a
-                            href={announcements[currentIndex].btnUrl || '#'}
-                            target={announcements[currentIndex].btnUrl?.startsWith('http') ? '_blank' : '_self'}
-                            rel="noreferrer"
+                            {...getButtonLinkProps(announcements[currentIndex].btnUrl)}
                             className="inline-flex items-center gap-2 rounded-full bg-electric px-5 py-3 text-xs font-black uppercase tracking-wider text-white shadow-neon transition hover:-translate-y-0.5 hover:bg-plasma"
                           >
                             {announcements[currentIndex].btnText}
