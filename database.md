@@ -24,8 +24,8 @@ This guide explains how to set up, publish, and connect a Google Sheet to power 
 
 ## 2. Formatting Images
 You can load images in two ways:
-*   **Option A (Local Paths)**: Put your image inside the project's `/public/assets/events/` folder (e.g. `/public/assets/events/boardroom.png`) and type the relative path in the spreadsheet cell:
-    `/assets/events/boardroom.png`
+*   **Option A (Local Paths)**: Put your image inside the project's `/public/assets/announcements/` folder (e.g. `/public/assets/announcements/boardroom.png`) and type the relative path in the spreadsheet cell:
+    `/assets/announcements/boardroom.png`
 *   **Option B (Cloud URLs)**: Upload your image to any cloud host (like Imgur, Postimages, or Discord/GitHub link) and paste the direct URL in the spreadsheet cell:
     `https://images.unsplash.com/photo-1540575467063-178a50c2df87...`
 
