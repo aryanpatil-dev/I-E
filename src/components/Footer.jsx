@@ -4,7 +4,7 @@ const socialLinks = [
   { label: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/iandecell_ace/' },
   { label: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/atharva-college-of-engineering-s-innovation-entrepreneurship-cell/' },
   { label: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@ace_eeutopia' },
-  { label: 'Mail', icon: Mail, href: 'mailto:iecell@atharvacoe.ac.in' },
+  { label: 'Mail', icon: Mail, href: 'mailto:aceicell@atharvacoe.ac.in' },
 ];
 
 export default function Footer() {

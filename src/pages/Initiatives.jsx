@@ -99,7 +99,7 @@ export default function Initiatives() {
                 </div>
               </div>
               <a
-                href="mailto:iecell@atharvacoe.ac.in"
+                href="mailto:aceicell@atharvacoe.ac.in"
                 className="inline-flex items-center justify-center rounded-full bg-electric px-6 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-white shadow-neon transition hover:-translate-y-0.5 hover:bg-plasma"
               >
                 Get In Touch

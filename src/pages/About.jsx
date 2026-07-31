@@ -72,8 +72,8 @@ const ieHistory = [
   },
   {
     year: '2025',
-    title: 'The Phoenix Era & Finoverse Hackathons',
-    text: 'Hosted major hackathons including Finoverse and Phoenix 2.O, pushing prototype development, Web3, and IoT design validation to new heights.',
+    title: 'The Phoenix Era & Finnoverse Hackathons',
+    text: 'Hosted major hackathons including Finnoverse and Phoenix 2.O, pushing prototype development, Web3, and IoT design validation to new heights.',
   },
 ];
 

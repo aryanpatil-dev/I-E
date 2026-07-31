@@ -6,12 +6,33 @@ import { initiatives } from '../data/siteContent.js';
 
 // Map event IDs to a set of gallery moments
 const eventGalleryMapping = {
-  mun: [1, 4, 7, 10],
-  finoverse: [2, 5, 8, 11],
-  phoenix1: [3, 6, 9, 12],
-  phoenix2: [4, 8, 1, 10],
-  'model-senate': [5, 9, 2, 11],
-  kwi: [6, 10, 3, 12],
+  'mun-2024': [
+    '/assets/events/MUN 2024/MUN 24 Photo 1.JPG',
+    '/assets/events/MUN 2024/MUN 24 Photo 2.JPG',
+    '/assets/events/MUN 2024/MUN 24 Photo 3.JPG',
+    '/assets/events/MUN 2024/MUN 24 Photo 4.JPG'
+  ],
+  'mun-2025': [
+    '/assets/events/MUN 2025/MUN 25 Photo 1.JPG',
+    '/assets/events/MUN 2025/MUN 25 Photo 2.JPG',
+    '/assets/events/MUN 2025/MUN 25 Photo 3.JPG',
+    '/assets/events/MUN 2025/MUN 25 Photo 4.JPG'
+  ],
+  finnoverse: [
+    '/assets/events/FINNOVERSE/Finnoverse Photo 1.JPG',
+    '/assets/events/FINNOVERSE/Finnoverse Photo 2.JPG',
+    '/assets/events/FINNOVERSE/Finnoverse Photo 3.JPG',
+    '/assets/events/FINNOVERSE/Finnoverse Photo 4.JPG'
+  ],
+  phoenix1: [3, 6, 9, 12].map((idx) => `/assets/gallery/moment${idx}.jpg`),
+  phoenix2: [4, 8, 1, 10].map((idx) => `/assets/gallery/moment${idx}.jpg`),
+  'model-senate': [
+    '/assets/events/Model Senate 2026/Senate photo 1.jpg',
+    '/assets/events/Model Senate 2026/Senate photo 2.jpeg',
+    '/assets/events/Model Senate 2026/Senate photo 3.jpeg',
+    '/assets/events/Model Senate 2026/Senate photo 4.jpeg'
+  ],
+  kwi: [6, 10, 3, 12].map((idx) => `/assets/gallery/moment${idx}.jpg`),
 };
 
 export default function EventArchive() {
@@ -19,8 +40,7 @@ export default function EventArchive() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const event = initiatives.find((item) => item.id === eventId);
-  const galleryIndexes = eventGalleryMapping[eventId] || [1, 2, 3, 4];
-  const galleryImages = galleryIndexes.map((idx) => `/assets/gallery/moment${idx}.jpg`);
+  const galleryImages = eventGalleryMapping[eventId] || [1, 2, 3, 4].map((idx) => `/assets/gallery/moment${idx}.jpg`);
 
   if (!event) {
     return (

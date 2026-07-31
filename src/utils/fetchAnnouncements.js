@@ -22,7 +22,7 @@ export const DEFAULT_ANNOUNCEMENTS = [
     btnUrl: '/initiatives'
   },
   {
-    title: 'Finoverse Hackathon',
+    title: 'Finnoverse Hackathon',
     tag: 'Tech Innovation',
     subtext: 'A finance and web3 innovation event combining blockchain, modern finance, and decentralization ideation, leading to awesome projects built by ACE students.',
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80',

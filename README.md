@@ -41,7 +41,6 @@ The project utilizes a modern frontend stack chosen for performance, animation c
 ├── src/
 │   ├── components/        # Reusable interface components
 │   │   ├── AnimatedIELogo.jsx   # Custom animated SVG logo container
-│   │   ├── Countdown.jsx        # Countdowns for upcoming summits
 │   │   ├── EventVisual.jsx      # Specialized event layout visuals
 │   │   ├── Footer.jsx           # Site footer with platform links
 │   │   ├── GeometricIcon.jsx    # Custom SVG decorative elements

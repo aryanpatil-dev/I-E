@@ -194,46 +194,32 @@ export const eventSchedule = [
 
 export const initiatives = [
   {
-    id: 'mun',
-    title: 'MUN',
-    image: '/assets/events/mun.jpg',
-    description: 'A platform for diplomacy, policy discussion, and global issue debate, helping students build public speaking and negotiation skills.',
+    id: 'mun-2024',
+    title: 'MUN 2024',
+    image: '/assets/events/MUN 2024/MUN 24 Photo 1.JPG',
+    description: 'A platform for diplomacy, policy discussion, and global issue debate from our 2024 chapter, helping students build public speaking and negotiation skills.',
     tag: 'Diplomacy & Policy',
   },
   {
-    id: 'finoverse',
-    title: 'Finoverse',
-    image: '/assets/events/finoverse.jpg',
+    id: 'mun-2025',
+    title: 'MUN 2025',
+    image: '/assets/events/MUN 2025/MUN 25 Photo 1.JPG',
+    description: 'Continuing the legacy of global policy debate, committee sessions, and diplomatic negotiations at ACE in our 2025 chapter.',
+    tag: 'Diplomacy & Policy',
+  },
+  {
+    id: 'finnoverse',
+    title: 'Finnoverse',
+    image: '/assets/events/FINNOVERSE/Finnoverse Photo 1.JPG',
     description: 'A finance and web3 innovation event combining blockchain, modern finance, and decentralization ideation.',
     tag: 'Web3 & FinTech',
   },
   {
-    id: 'phoenix1',
-    title: 'Phoenix 1',
-    image: '/assets/events/phoenix1.jpg',
-    description: 'The first edition of the cell\'s landmark innovation hackathon, bringing engineers together to build rapid solutions.',
-    tag: 'Hackathon',
-  },
-  {
-    id: 'phoenix2',
-    title: 'Phoenix 2.O',
-    image: '/assets/events/phoenix2.jpg',
-    description: 'The evolved sequel of the flagship hackathon, pushing the boundaries of prototype design and hardware/software integration.',
-    tag: 'Product Build',
-  },
-  {
     id: 'model-senate',
     title: 'Model Senate',
-    image: '/assets/events/model-senate.jpg',
+    image: '/assets/events/Model Senate 2026/Senate photo 1.jpg',
     description: 'A simulation of parliament and policymaking to foster civic understanding, debating, and structured governance thinking.',
     tag: 'Governance',
-  },
-  {
-    id: 'kwi',
-    title: 'KWI',
-    image: '/assets/events/kwi.jpg',
-    description: 'An intensive creative thinking and innovation ideation camp focused on problem solving and collaborative modeling.',
-    tag: 'Creative Innovation',
   },
 ];
 
@@ -310,6 +296,12 @@ export const currentTeam = [
     image: '/assets/team/Harshita.JPG',
     linkedin: '#',
   },
+  {
+    name: 'Krisha Banjan',
+    role: 'PR Head',
+    image: '/assets/team/Krisha Banjan.JPG',
+    linkedin: 'https://www.linkedin.com/in/krisha-banjan',
+  },
 ];
 
 export const yearlyArchives = {
@@ -382,7 +374,7 @@ export const yearlyArchives = {
     { name: 'Darshan Patole', role: 'Technical Head', image: '/assets/team/Darshan Patole.png', linkedin: 'https://www.linkedin.com/in/darshan-patole-52989a315?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
     { name: 'Dipika Gaikwad', role: 'Chief Marketing Officer', image: '/assets/team/default.png', linkedin: 'https://www.linkedin.com/in/dipika-gaikwad-48b1a537a' },
     { name: 'Abhinav Makottan', role: 'Chief Logistics Officer', image: '/assets/team/default.png', linkedin: 'https://www.linkedin.com/in/abhinav-makkoottan-3a68b731b' },
-    { name: 'Krisha Banjan', role: 'PR Assistant', image: '/assets/team/Krisha Banjan.JPG', linkedin: 'https://www.linkedin.com/in/krisha-banjan' },
+    { name: 'Krisha Banjan', role: 'PR Head', image: '/assets/team/Krisha Banjan.JPG', linkedin: 'https://www.linkedin.com/in/krisha-banjan' },
     { name: 'Sahil Kadam', role: 'PR Assistant', image: '/assets/team/default.png', linkedin: 'https://www.linkedin.com/in/sahil-kadam-50284a300' },
     { name: 'Mahesh Ghutukade', role: 'PR Assistant', image: '/assets/team/default.png', linkedin: '#' },
     { name: 'Anjali More', role: 'Technical Assistant', image: '/assets/team/default.png', linkedin: '#' },

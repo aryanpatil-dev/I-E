@@ -31,7 +31,6 @@ I&E Cell/
     ├── main.jsx               # React 19 DOM mounting configuration
     ├── components/            # Reusable interactive UI components
     │   ├── AnimatedIELogo.jsx  # Customized animated SVG logo container
-    │   ├── Countdown.jsx       # Generic count-down timer logic (not currently rendered)
     │   ├── EventVisual.jsx     # Event decorative grid cards
     │   ├── Footer.jsx          # Official footer with campus address & social links
     │   ├── GeometricIcon.jsx   # Custom SVG decorative grid icons
