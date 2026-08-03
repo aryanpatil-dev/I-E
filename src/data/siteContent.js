@@ -231,20 +231,20 @@ export const currentTeam = [
     linkedin: 'https://www.linkedin.com/in/pratham-shinde',
   },
   {
+    name: 'Mahendra Patel',
+    role: 'COO',
+    image: '/assets/team/Mahendra Patel.JPG',
+    linkedin: '#',
+  },
+  {
     name: 'Subham Sahoo',
     role: 'CFO',
     image: '/assets/team/Subham.jpg',
     linkedin: 'https://www.linkedin.com/in/subham-sahoo-29238a233',
   },
   {
-    name: 'Mahendra Patel',
-    role: 'Chief Sales Officer',
-    image: '/assets/team/Mahendra Patel.JPG',
-    linkedin: '#',
-  },
-  {
     name: 'Rohan Mishra',
-    role: 'Human Resources Officer',
+    role: 'HR',
     image: '/assets/team/Rohan Mishra.JPG',
     linkedin: '#',
   },
@@ -256,43 +256,31 @@ export const currentTeam = [
   },
   {
     name: 'Jidnyey Kini',
-    role: 'Chief Strategic Officer',
+    role: 'Operational Director',
     image: '/assets/team/Jidnyey Kini.JPG',
     linkedin: 'https://www.linkedin.com/in/jidnyey-kini-82449a352',
   },
   {
-    name: 'Darshan Patole',
-    role: 'Technical Head',
-    image: '/assets/team/Darshan Patole.png',
-    linkedin: 'https://www.linkedin.com/in/darshan-patole-52989a315?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-  },
-  {
-    name: 'Bhakti Teli',
-    role: 'Finance Assistant',
-    image: '/assets/team/Bhakti Teli.JPG',
-    linkedin: 'https://www.linkedin.com/in/bhakti-teli-a140a5358',
-  },
-  {
     name: 'Manish Kamble',
-    role: 'Strategic Assistant',
+    role: 'Chief Statergic Officer',
     image: '/assets/team/Manish Kamble.JPG',
     linkedin: '#',
   },
   {
     name: 'Nupur Telang',
-    role: 'Strategic Assistant',
+    role: 'Chief Statergic Officer',
     image: '/assets/team/Nupur Telang.JPG',
     linkedin: 'https://www.linkedin.com/in/nupur-telang-62ba792b4',
   },
   {
-    name: 'Aarya Jagatia',
-    role: 'Marketing Assistant',
-    image: '/assets/team/Aarya Jagatia.JPG',
-    linkedin: '#',
+    name: 'Darshan Patole',
+    role: 'Chief Technical Officer',
+    image: '/assets/team/Darshan Patole.png',
+    linkedin: 'https://www.linkedin.com/in/darshan-patole-52989a315?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   },
   {
     name: 'Harshita Singh',
-    role: 'Chief Public Relations Officer',
+    role: 'Technical Head',
     image: '/assets/team/Harshita.JPG',
     linkedin: '#',
   },
@@ -301,6 +289,18 @@ export const currentTeam = [
     role: 'PR Head',
     image: '/assets/team/Krisha Banjan.JPG',
     linkedin: 'https://www.linkedin.com/in/krisha-banjan',
+  },
+  {
+    name: 'Bhakti Teli',
+    role: 'Chief Marketing Officer',
+    image: '/assets/team/Bhakti Teli.JPG',
+    linkedin: 'https://www.linkedin.com/in/bhakti-teli-a140a5358',
+  },
+  {
+    name: 'Aarya Jagatia',
+    role: 'Chief Sales Officer',
+    image: '/assets/team/Aarya Jagatia.JPG',
+    linkedin: '#',
   },
 ];
 
@@ -410,5 +410,6 @@ export const ocMembers = [
   { name: 'Shubham Dalvi', linkedin: '#' },
   { name: 'Siddhant Shele', linkedin: '#' },
   { name: 'Vedant', linkedin: '#' },
+  { name: 'Abdullah Shaikh', linkedin: 'linkedin.com/in/abdullah-shaikh-2a5144373'}
 ];
 

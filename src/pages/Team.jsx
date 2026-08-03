@@ -55,8 +55,8 @@ export default function Team() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Group team members for hierarchical grid layout
-  const topMembers = currentTeam.filter(m => ['ceo', 'cfo'].includes(m.role.toLowerCase()));
-  const otherMembers = currentTeam.filter(m => !['ceo', 'cfo'].includes(m.role.toLowerCase()));
+  const topMembers = currentTeam.filter(m => ['ceo', 'coo'].includes(m.role.toLowerCase()));
+  const otherMembers = currentTeam.filter(m => !['ceo', 'coo'].includes(m.role.toLowerCase()));
 
   // Archive groupings
   const selectedYearTeam = yearlyArchives[selectedYear] || [];
