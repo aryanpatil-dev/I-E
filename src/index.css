@@ -76,7 +76,7 @@ a {
 
   .soft-copy {
     @apply text-sm leading-7 sm:text-base;
-    color: #8a9bb5;
+    color: #a5b5cc;
   }
 
   .neon-card {

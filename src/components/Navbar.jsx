@@ -67,6 +67,8 @@ export default function Navbar() {
           <img
             src="/assets/logos/I_E_CELL.ico"
             alt="I&E Cell Logo"
+            width="44"
+            height="44"
             className="h-8 w-8 sm:h-11 sm:w-11 rounded-full object-contain flex-shrink-0"
           />
           <AnimatedIELogo compact className="h-auto w-full flex-grow" />

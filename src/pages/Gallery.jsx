@@ -182,7 +182,8 @@ export default function Gallery() {
                     <img
                       src={moment.src}
                       alt={moment.alt}
-                      loading="lazy"
+                      width="400"
+                      height="400"
                       className="h-full w-full object-cover saturate-125 transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                     

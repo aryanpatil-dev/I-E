@@ -50,6 +50,8 @@ export default function Initiatives() {
                         src={item.image}
                         alt={`Visual for ${item.title}`}
                         loading="lazy"
+                        width="400"
+                        height="224"
                         className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-125"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-electric/40 via-electric/5 to-transparent opacity-80" />

@@ -120,6 +120,8 @@ export default function Home() {
                    <img
                     src="/assets/logos/Atharva_University_Logo.webp"
                     alt="Atharva University"
+                    width="80"
+                    height="80"
                     className="h-full w-auto object-contain rounded"
                   />
                 </div>
@@ -131,6 +133,8 @@ export default function Home() {
                   <img
                     src="/assets/logos/Atharva_college_logo.webp"
                     alt="Atharva College of Engineering"
+                    width="80"
+                    height="80"
                     className="h-full w-auto object-contain rounded"
                   />
                 </div>
@@ -142,6 +146,8 @@ export default function Home() {
                   <img
                     src="/assets/logos/IIC_Logo.webp"
                     alt="Institution's Innovation Council"
+                    width="80"
+                    height="80"
                     className="h-full w-auto object-contain rounded"
                   />
                 </div>

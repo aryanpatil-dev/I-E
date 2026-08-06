@@ -123,6 +123,8 @@ export default function EventArchive() {
               <img
                 src={event.image}
                 alt={event.title}
+                width="1200"
+                height="450"
                 className="h-full w-full object-cover saturate-125 brightness-[0.85]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-cloud via-cloud/30 to-transparent" />
@@ -175,7 +177,8 @@ export default function EventArchive() {
                     <img
                       src={src}
                       alt={`${event.title} Moment ${index + 1}`}
-                      loading="lazy"
+                      width="400"
+                      height="300"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 saturate-125"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4" />

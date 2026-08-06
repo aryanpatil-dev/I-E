@@ -8,7 +8,7 @@ export default {
         cloud: '#0d1b2a',
         mist: '#1a3050',
         ink: '#f0eeea',
-        muted: '#8a9bb5',
+        muted: '#a5b5cc',
         electric: '#c9a03e',
         plasma: '#1e4d8c',
         flare: '#e5c06a',

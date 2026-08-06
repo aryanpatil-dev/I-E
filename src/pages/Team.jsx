@@ -19,7 +19,8 @@ function TeamMemberCard({ member }) {
           src={member.image}
           alt={member.name}
           style={positionStyle}
-          loading="lazy"
+          width="112"
+          height="112"
           className="h-full w-full object-cover saturate-110 hover:scale-105 transition-transform duration-300"
           onError={(e) => {
             e.target.src = '/assets/team/default.webp';
