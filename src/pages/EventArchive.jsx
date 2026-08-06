@@ -10,11 +10,13 @@ const newGalleryImages = [
   '/assets/gallery/Inaug photo.webp',
   '/assets/gallery/Inaug1.webp',
   '/assets/gallery/Inaug Photo 2.webp',
-  '/assets/gallery/MUN 2024 Winners.webp',
   '/assets/gallery/MUN 2024 Closing.webp',
   '/assets/gallery/MUN 2024 Closing 2.webp',
+  '/assets/gallery/MUN-2024-Closing-3.webp',
   '/assets/gallery/MUN 2024 Closing 4.webp',
   '/assets/gallery/MUN 2025 Closing.webp',
+  '/assets/gallery/MUN-2025-Closing-2.webp',
+  '/assets/gallery/MUN-2025-Closing-3.webp',
   '/assets/gallery/MUN 2025 Closing 4.webp',
 ];
 
@@ -173,6 +175,7 @@ export default function EventArchive() {
                     <img
                       src={src}
                       alt={`${event.title} Moment ${index + 1}`}
+                      loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 saturate-125"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4" />

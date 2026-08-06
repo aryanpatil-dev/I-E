@@ -31,21 +31,21 @@ const galleryMoments = [
   },
   {
     id: 5,
-    src: '/assets/gallery/MUN 2024 Winners.webp',
-    alt: 'MUN 2024 Award Ceremony',
-    category: 'Hackathon',
-  },
-  {
-    id: 6,
     src: '/assets/gallery/MUN 2024 Closing.webp',
     alt: 'MUN 2024 Closing Group',
     category: 'Summit',
   },
   {
-    id: 7,
+    id: 6,
     src: '/assets/gallery/MUN 2024 Closing 2.webp',
     alt: 'MUN 2024 Closing Highlights',
     category: 'Workshop',
+  },
+  {
+    id: 7,
+    src: '/assets/gallery/MUN-2024-Closing-3.webp',
+    alt: 'MUN 2024 Closing Awards',
+    category: 'Hackathon',
   },
   {
     id: 8,
@@ -61,6 +61,18 @@ const galleryMoments = [
   },
   {
     id: 10,
+    src: '/assets/gallery/MUN-2025-Closing-2.webp',
+    alt: 'MUN 2025 Closing Winners',
+    category: 'Hackathon',
+  },
+  {
+    id: 11,
+    src: '/assets/gallery/MUN-2025-Closing-3.webp',
+    alt: 'MUN 2025 Closing Highlights',
+    category: 'Workshop',
+  },
+  {
+    id: 12,
     src: '/assets/gallery/MUN 2025 Closing 4.webp',
     alt: 'MUN 2025 Closing Group',
     category: 'Workshop',
@@ -70,12 +82,12 @@ const galleryMoments = [
 // Carousel slides (order: senate, then mun, then finnoverse)
 const winnerSlides = [
   {
-    image: '/assets/Winners/Winner Senate.webp',
+    image: '/assets/Winners/Winners Senate.webp',
     title: 'Model Senate Winners',
     description: 'Outstanding delegates recognized for leadership and policy solutions at the Model Senate.',
   },
   {
-    image: '/assets/Winners/MUN-2025-Closing-2.webp',
+    image: '/assets/Winners/MUN 2024 Winners.webp',
     title: 'Model United Nations Winners',
     description: 'Award-winning delegacy performance and diplomacy at the annual ACE MUN.',
   },
@@ -170,6 +182,7 @@ export default function Gallery() {
                     <img
                       src={moment.src}
                       alt={moment.alt}
+                      loading="lazy"
                       className="h-full w-full object-cover saturate-125 transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                     
