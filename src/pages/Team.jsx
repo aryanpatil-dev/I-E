@@ -6,7 +6,7 @@ import SectionHeading from '../components/SectionHeading.jsx';
 import { currentTeam, yearlyArchives, ocMembers } from '../data/siteContent.js';
 
 function TeamMemberCard({ member }) {
-  const isDefaultImage = member.image === '/assets/team/default.png';
+  const isDefaultImage = member.image === '/assets/team/default.webp';
   const positionStyle = isDefaultImage
     ? { objectPosition: 'center center' }
     : { objectPosition: member.imagePosition || 'center 15%' };
@@ -21,7 +21,7 @@ function TeamMemberCard({ member }) {
           style={positionStyle}
           className="h-full w-full object-cover saturate-110 hover:scale-105 transition-transform duration-300"
           onError={(e) => {
-            e.target.src = '/assets/team/default.png';
+            e.target.src = '/assets/team/default.webp';
             e.target.style.objectPosition = 'center center';
           }}
         />
@@ -240,9 +240,9 @@ export default function Team() {
                       {/* Faded Team Cards inside background */}
                       <div className="grid gap-x-8 gap-y-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 opacity-30 select-none pointer-events-none">
                         {[
-                          { name: 'Coordinator Name', role: 'Overall Coordinator', image: '/assets/team/default.png' },
-                          { name: 'Leader Name', role: 'Technical Head', image: '/assets/team/default.png' },
-                          { name: 'Officer Name', role: 'Design Head', image: '/assets/team/default.png' },
+                          { name: 'Coordinator Name', role: 'Overall Coordinator', image: '/assets/team/default.webp' },
+                          { name: 'Leader Name', role: 'Technical Head', image: '/assets/team/default.webp' },
+                          { name: 'Officer Name', role: 'Design Head', image: '/assets/team/default.webp' },
                         ].map((mockMember, i) => (
                           <div key={i} className="relative bg-slate-900 rounded-xl p-6 pt-16 pb-8 text-center border border-white/5">
                             <div className="absolute -top-12 left-1/2 -translate-x-1/2 size-24 rounded-full border-4 border-slate-900 bg-slate-800" />

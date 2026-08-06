@@ -5,34 +5,47 @@ import { useState } from 'react';
 import { initiatives } from '../data/siteContent.js';
 
 // Map event IDs to a set of gallery moments
+const newGalleryImages = [
+  '/assets/gallery/Inaug.webp',
+  '/assets/gallery/Inaug photo.webp',
+  '/assets/gallery/Inaug1.webp',
+  '/assets/gallery/Inaug Photo 2.webp',
+  '/assets/gallery/MUN 2024 Winners.webp',
+  '/assets/gallery/MUN 2024 Closing.webp',
+  '/assets/gallery/MUN 2024 Closing 2.webp',
+  '/assets/gallery/MUN 2024 Closing 4.webp',
+  '/assets/gallery/MUN 2025 Closing.webp',
+  '/assets/gallery/MUN 2025 Closing 4.webp',
+];
+
 const eventGalleryMapping = {
   'mun-2024': [
-    '/assets/events/MUN 2024/MUN 24 Photo 1.JPG',
-    '/assets/events/MUN 2024/MUN 24 Photo 2.JPG',
-    '/assets/events/MUN 2024/MUN 24 Photo 3.JPG',
-    '/assets/events/MUN 2024/MUN 24 Photo 4.JPG'
+    '/assets/events/MUN 2024/MUN 24 Photo 1.webp',
+    '/assets/events/MUN 2024/MUN 24 Photo 2.webp',
+    '/assets/events/MUN 2024/MUN 24 Photo 3.webp',
+    '/assets/events/MUN 2024/MUN 24 Photo 4.webp'
   ],
   'mun-2025': [
-    '/assets/events/MUN 2025/MUN 25 Photo 1.JPG',
-    '/assets/events/MUN 2025/MUN 25 Photo 2.JPG',
-    '/assets/events/MUN 2025/MUN 25 Photo 3.JPG',
-    '/assets/events/MUN 2025/MUN 25 Photo 4.JPG'
+    '/assets/events/MUN 2025/MUN 25 Photo 1.webp',
+    '/assets/events/MUN 2025/MUN 25 Photo 2.webp',
+    '/assets/events/MUN 2025/MUN 25 Photo 3.webp',
+    '/assets/events/MUN 2025/MUN 25 Photo 4.webp'
   ],
   finnoverse: [
-    '/assets/events/FINNOVERSE/Finnoverse Photo 1.JPG',
-    '/assets/events/FINNOVERSE/Finnoverse Photo 2.JPG',
-    '/assets/events/FINNOVERSE/Finnoverse Photo 3.JPG',
-    '/assets/events/FINNOVERSE/Finnoverse Photo 4.JPG'
+    '/assets/events/FINNOVERSE/Finnoverse Photo 1.webp',
+    '/assets/events/FINNOVERSE/Finnoverse Photo 2.webp',
+    '/assets/events/FINNOVERSE/Finnoverse Photo 3.webp',
+    '/assets/events/FINNOVERSE/Finnoverse Photo 4.webp'
   ],
-  phoenix1: [3, 6, 9, 12].map((idx) => `/assets/gallery/moment${idx}.jpg`),
-  phoenix2: [4, 8, 1, 10].map((idx) => `/assets/gallery/moment${idx}.jpg`),
+  phoenix1: [newGalleryImages[0], newGalleryImages[1], newGalleryImages[2], newGalleryImages[3]],
+  phoenix2: [newGalleryImages[4], newGalleryImages[5], newGalleryImages[6], newGalleryImages[7]],
   'model-senate': [
-    '/assets/events/Model Senate 2026/Senate photo 1.jpg',
-    '/assets/events/Model Senate 2026/Senate photo 2.jpeg',
-    '/assets/events/Model Senate 2026/Senate photo 3.jpeg',
-    '/assets/events/Model Senate 2026/Senate photo 4.jpeg'
+    '/assets/events/Model Senate 2026/Senate photo 1.webp',
+    '/assets/events/Model Senate 2026/Senate photo 2.webp',
+    '/assets/events/Model Senate 2026/Senate photo 3.webp',
+    '/assets/events/Model Senate 2026/Senate photo 4.webp'
   ],
-  kwi: [6, 10, 3, 12].map((idx) => `/assets/gallery/moment${idx}.jpg`),
+  kwi: [newGalleryImages[8], newGalleryImages[9], newGalleryImages[0], newGalleryImages[1]],
 };
 
 export default function EventArchive() {
@@ -40,7 +53,7 @@ export default function EventArchive() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const event = initiatives.find((item) => item.id === eventId);
-  const galleryImages = eventGalleryMapping[eventId] || [1, 2, 3, 4].map((idx) => `/assets/gallery/moment${idx}.jpg`);
+  const galleryImages = eventGalleryMapping[eventId] || [newGalleryImages[0], newGalleryImages[1], newGalleryImages[2], newGalleryImages[3]];
 
   if (!event) {
     return (

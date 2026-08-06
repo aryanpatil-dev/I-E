@@ -3,31 +3,86 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, Maximize2, Trophy, Image as ImageIcon } from 'lucide-react';
 import Reveal from '../components/Reveal.jsx';
 
-// 12 moments in the main gallery
-const galleryMoments = Array.from({ length: 12 }, (_, i) => ({
-  id: i + 1,
-  src: `/assets/gallery/moment${i + 1}.jpg`,
-  alt: `I&E Cell Moment ${i + 1}`,
-  title: `Cell Milestone ${i + 1}`,
-  category: i % 3 === 0 ? 'Hackathon' : i % 3 === 1 ? 'Workshop' : 'Summit',
-}));
+// Moments in the main gallery
+const galleryMoments = [
+  {
+    id: 1,
+    src: '/assets/gallery/Inaug.webp',
+    alt: 'I&E Cell Inauguration Ceremony',
+    category: 'Summit',
+  },
+  {
+    id: 2,
+    src: '/assets/gallery/Inaug photo.webp',
+    alt: 'I&E Cell Inauguration Group',
+    category: 'Workshop',
+  },
+  {
+    id: 3,
+    src: '/assets/gallery/Inaug1.webp',
+    alt: 'I&E Cell Inauguration Launch',
+    category: 'Hackathon',
+  },
+  {
+    id: 4,
+    src: '/assets/gallery/Inaug Photo 2.webp',
+    alt: 'I&E Cell Inauguration Stage',
+    category: 'Summit',
+  },
+  {
+    id: 5,
+    src: '/assets/gallery/MUN 2024 Winners.webp',
+    alt: 'MUN 2024 Award Ceremony',
+    category: 'Hackathon',
+  },
+  {
+    id: 6,
+    src: '/assets/gallery/MUN 2024 Closing.webp',
+    alt: 'MUN 2024 Closing Group',
+    category: 'Summit',
+  },
+  {
+    id: 7,
+    src: '/assets/gallery/MUN 2024 Closing 2.webp',
+    alt: 'MUN 2024 Closing Highlights',
+    category: 'Workshop',
+  },
+  {
+    id: 8,
+    src: '/assets/gallery/MUN 2024 Closing 4.webp',
+    alt: 'MUN 2024 Closing Stage',
+    category: 'Hackathon',
+  },
+  {
+    id: 9,
+    src: '/assets/gallery/MUN 2025 Closing.webp',
+    alt: 'MUN 2025 Closing Ceremony',
+    category: 'Summit',
+  },
+  {
+    id: 10,
+    src: '/assets/gallery/MUN 2025 Closing 4.webp',
+    alt: 'MUN 2025 Closing Group',
+    category: 'Workshop',
+  },
+];
 
-// Carousel slides
+// Carousel slides (order: senate, then mun, then finnoverse)
 const winnerSlides = [
   {
-    image: '/assets/winners/winner1.jpg',
-    title: 'First Edition of Eureka GCC!',
-    description: 'Atharva innovators winning top honors at the international GCC startup business plan challenge.',
+    image: '/assets/Winners/Winner Senate.webp',
+    title: 'Model Senate Winners',
+    description: 'Outstanding delegates recognized for leadership and policy solutions at the Model Senate.',
   },
   {
-    image: '/assets/winners/winner2.jpg',
-    title: 'Ideathon Pitch Winners',
-    description: 'Securing prototype grants for smart urban parking and traffic signals validation.',
+    image: '/assets/Winners/MUN-2025-Closing-2.webp',
+    title: 'Model United Nations Winners',
+    description: 'Award-winning delegacy performance and diplomacy at the annual ACE MUN.',
   },
   {
-    image: '/assets/winners/winner3.jpg',
-    title: 'Diplomacy Debate Winners',
-    description: 'Award-winning delegacy performance and policy resolutions at the model congress assembly.',
+    image: '/assets/Winners/Finnoverse Winners.webp',
+    title: 'Finnoverse FinTech Winners',
+    description: 'Securing top honors for blockchain and decentralized finance pitch ideas.',
   },
 ];
 
@@ -127,9 +182,6 @@ export default function Gallery() {
                         <span className="grid size-8 place-items-center rounded-full bg-cloud/90 text-electric backdrop-blur-md shadow-soft">
                           <Maximize2 className="size-4" />
                         </span>
-                      </div>
-                      <div>
-                        <h3 className="mt-1 text-sm font-black text-white truncate">{moment.title}</h3>
                       </div>
                     </div>
                   </div>
@@ -262,13 +314,8 @@ export default function Gallery() {
               <img
                 src={galleryMoments[lightboxIndex].src}
                 alt={galleryMoments[lightboxIndex].alt}
-                className="max-h-[75vh] max-w-[85vw] object-contain rounded-t-lg"
+                className="max-h-[80vh] max-w-[85vw] object-contain rounded-lg"
               />
-              <div className="w-full bg-[#11213a] p-4 text-center border-t border-white/10">
-                <h3 className="text-white font-black text-lg mt-1">
-                  {galleryMoments[lightboxIndex].title}
-                </h3>
-              </div>
             </motion.div>
           </motion.div>
         )}

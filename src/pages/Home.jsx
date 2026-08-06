@@ -117,8 +117,8 @@ export default function Home() {
               {/* Overlay Top-Left: Parent Organizations Logos (Theme Matched) */}
               <div className="absolute left-3 top-3 z-20 flex gap-1.5 sm:left-5 sm:top-5 sm:gap-2.5">
                 <div className="bg-black p-0.5 sm:p-1.5 rounded border border-electric/20 shadow-[0_4px_12px_rgba(201,160,62,0.12)] h-7 w-auto sm:h-11 md:h-14 lg:h-16 flex items-center justify-center">
-                  <img
-                    src="/assets/logos/Atharva_University_Logo.jpeg"
+                   <img
+                    src="/assets/logos/Atharva_University_Logo.webp"
                     alt="Atharva University"
                     className="h-full w-auto object-contain rounded"
                   />
@@ -129,7 +129,7 @@ export default function Home() {
               <div className="absolute left-1/2 -translate-x-1/2 top-3 z-20 flex sm:top-5">
                 <div className="bg-white p-0.5 sm:p-1.5 rounded border border-electric/20 shadow-[0_4px_12px_rgba(201,160,62,0.12)] h-7 w-auto sm:h-11 md:h-14 lg:h-16 flex items-center justify-center">
                   <img
-                    src="/assets/logos/Atharva_college_logo.jpeg"
+                    src="/assets/logos/Atharva_college_logo.webp"
                     alt="Atharva College of Engineering"
                     className="h-full w-auto object-contain rounded"
                   />
@@ -140,7 +140,7 @@ export default function Home() {
               <div className="absolute right-3 top-3 z-20 flex gap-1.5 sm:right-5 sm:top-5 sm:gap-2.5">
                 <div className="bg-white p-0.5 sm:p-1.5 rounded border border-electric/20 shadow-[0_4px_12px_rgba(201,160,62,0.12)] h-7 w-auto sm:h-11 md:h-14 lg:h-16 flex items-center justify-center">
                   <img
-                    src="/assets/logos/IIC_Logo.jpeg"
+                    src="/assets/logos/IIC_Logo.webp"
                     alt="Institution's Innovation Council"
                     className="h-full w-auto object-contain rounded"
                   />
